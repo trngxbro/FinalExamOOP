@@ -1,4 +1,4 @@
-public class Test {
+public class TestSV {
 	public static void main (String [] args) {
 		SinhVien sv  = new SinhVien ("Nguyen Trung Nghia", "52000693");
 		SinhVien svn = new SinhVien ("Nguyen Trung Nghia", "52000693", "28/05/02");
