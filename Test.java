@@ -1,24 +1,6 @@
 import java.util.ArrayList;
 
-public class Test {	
-	//Method
-	public static double TotalCostOfJournal (ArrayList list) {
-		ArrayList<Journal> j = new ArrayList();
-		double total = 0;
-		for(int i=0; i<list.size(); i++){
-			if(list.get(i) instanceof Journal)
-			{
-				j.add((Journal)list.get(i));
-			}
-		}
-		
-		for(int i=0; i<j.size(); i++){
-			total += j.get(i).cost();
-		}
-		return total;
-	}
-	
-	
+public class Test extends Manager{	
 	public static void main (String [] args) {
 		//Create Object - Journal, Literature
 		Journal journal 	  = new Journal();
@@ -29,7 +11,7 @@ public class Test {
 		System.out.println(literature);
 		System.out.println("-----------------------");
 		
-		//Manager
+		//Book List
 		ArrayList<Book> list = new ArrayList<Book>();
 		list.add(new Journal(100000, "The Art"		, "Thoi trang", 250, 1));
 		list.add(new Journal(200000, "Sketch Book"	, "Thoi trang", 300, 2));
@@ -44,13 +26,13 @@ public class Test {
 		list.add(new Literature(500000, "Harry Poster"	, "Van hoc",  "W", 1998));
 		list.add(new Literature(450000, "Breaking Dawn"	, "Van hoc",  "L", 2010));
 		
-		System.out.println("List Book: ");
+		System.out.println();;
         for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
         }
 		System.out.println("-----------------------");
 		
-		//Call Method tinh tong tien quyen sach tap chi
+		//Call Method in class Manager
 		System.out.println();
 		System.out.println("Total Cost of Journal: " + TotalCostOfJournal(list));
 	}
